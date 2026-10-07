@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input Aset Tetap</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e9e9e9;
+            padding: 20px;
+            color: #222;
+        }
+        .form-box {
+            max-width: 650px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 25px;
+            border: 1px solid #ccc;
+        }
+        h2 {
+            text-align: left;
+            margin: 5px 0;
+        }
+        h3 {
+            text-align: left;
+            margin: 5px 0;
+            color: #555;
+        }
+        hr {
+            margin: 15px 0 20px 0;
+            border: 0;
+            border-top: 1px solid #ccc;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #bbb;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 5px;
+        }
+        .field {
+            margin-bottom: 12px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 7px;
+            box-sizing: border-box;
+            border: 1px solid #aaa;
+            border-radius: 3px;
+        }
+        .radio-item {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 14px;
+        }
+        .radio-item input {
+            vertical-align: middle;
+        }
+        .btn-area {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .btn-area input {
+            padding: 8px 18px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-box">
+        <h2>Awan's Tax Consultant</h2>
+        <h3>Form Pencatatan Aset Tetap</h3>
+        <hr>
+
+        <form action="" method="post" enctype="multipart/form-data">
+
+            <!-- Identitas Aset -->
+            <fieldset>
+                <legend>Identifikasi Aset</legend>
+                
+                <div class="field">
+                    <label for="assetName">Nama Aset:</label>
+                    <input type="text" id="assetName" name="assetName" placeholder="Contoh: Laptop Asus ROG" required>
+                </div>
+
+                <div class="field">
+                    <label for="assetCode">Kode Aset:</label>
+                    <input type="text" id="assetCode" name="assetCode" placeholder="AST-001" required>
+                </div>
+
+                <div class="field">
+                    <label for="serialNumber">Nomor Seri Aset:</label>
+                    <input type="text" id="serialNumber" name="serialNumber" placeholder="SN12345678">
+                </div>
+
+                <div class="field">
+                    <label for="assetCategory">Kategori Aset:</label>
+                    <select id="assetCategory" name="assetCategory" required>
+                        <option value="">-- Pilih Kategori --</option>
+                        <option value="Vehicle">Kendaraan</option>
+                        <option value="Machinery">Mesin & Peralatan</option>
+                        <option value="Building">Bangunan</option>
+                        <option value="Office Equipment">Peralatan Kantor</option>
+                        <option value="Furniture">Mebel / Furnitur</option>
+                        <option value="Land">Tanah</option>
+                        <option value="Software">Software</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <!-- Detail Perolehan -->
+            <fieldset>
+                <legend>Rincian Perolehan</legend>
+
+                <div class="field">
+                    <label for="acquisitionDate">Tanggal Perolehan:</label>
+                    <input type="date" id="acquisitionDate" name="acquisitionDate" required>
+                </div>
+
+                <div class="field">
+                    <label for="acquisitionValue">Harga Perolehan (Rp):</label>
+                    <input type="number" id="acquisitionValue" name="acquisitionValue" min="0" step="1000" placeholder="10000000" required>
+                </div>
+
+                <div class="field">
+                    <label>Metode Perolehan:</label>
+                    <div style="margin-top: 5px;">
+                        <span class="radio-item"><input type="radio" id="cash" name="acquisitionMethod" value="Cash Purchase" required> Tunai</span>
+                        <span class="radio-item"><input type="radio" id="credit" name="acquisitionMethod" value="Credit Purchase"> Kredit</span>
+                        <span class="radio-item"><input type="radio" id="lease" name="acquisitionMethod" value="Finance Lease"> Leasing</span>
+                        <span class="radio-item"><input type="radio" id="donation" name="acquisitionMethod" value="Donation"> Hibah / Donasi</span>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="vendor">Vendor / Supplier:</label>
+                    <input type="text" id="vendor" name="vendor" placeholder="PT. Jaya Mandiri" required>
+                </div>
+
+                <div class="field">
+                    <label for="acquisitionProof">Upload Bukti Perolehan (PDF/JPG/PNG):</label>
+                    <input type="file" id="acquisitionProof" name="acquisitionProof" accept=".pdf,.jpg,.png" required>
+                </div>
+            </fieldset>
+
+            <!-- Info Penyusutan -->
+            <fieldset>
+                <legend>Informasi Penyusutan</legend>
+
+                <div class="field">
+                    <label for="usefulLife">Masa Manfaat (Tahun):</label>
+                    <input type="number" id="usefulLife" name="usefulLife" min="1" max="50" placeholder="4" required>
+                </div>
+
+                <div class="field">
+                    <label for="salvageValue">Nilai Sisa / Salvage Value (Rp):</label>
+                    <input type="number" id="salvageValue" name="salvageValue" min="0" step="1000" placeholder="1000000" required>
+                </div>
+
+                <div class="field">
+                    <label for="depreciationMethod">Metode Penyusutan:</label>
+                    <select id="depreciationMethod" name="depreciationMethod" required>
+                        <option value="">-- Pilih Metode --</option>
+                        <option value="Straight-Line">Garis Lurus (Straight-Line)</option>
+                        <option value="Declining Balance">Saldo Menurun (Declining Balance)</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <!-- Penanggung Jawab -->
+            <fieldset>
+                <legend>Penanggung Jawab & Lokasi</legend>
+
+                <div class="field">
+                    <label for="responsiblePerson">Nama Penanggung Jawab:</label>
+                    <input type="text" id="responsiblePerson" name="responsiblePerson" placeholder="Budi Santoso" required>
+                </div>
+
+                <div class="field">
+                    <label for="userDepartment">Departemen:</label>
+                    <input type="text" id="userDepartment" name="userDepartment" placeholder="Accounting" required>
+                </div>
+
+                <div class="field">
+                    <label for="physicalLocation">Lokasi Aset:</label>
+                    <input type="text" id="physicalLocation" name="physicalLocation" placeholder="Gedung Utama Lt. 2" required>
+                </div>
+
+                <div class="field">
+                    <label for="responsibleEmail">Email Penanggung Jawab:</label>
+                    <input type="email" id="responsibleEmail" name="responsibleEmail" placeholder="budi@perusahaan.com" required>
+                </div>
+            </fieldset>
+
+            <div class="btn-area">
+                <input type="submit" value="Simpan Data">
+                <input type="reset" value="Reset">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
