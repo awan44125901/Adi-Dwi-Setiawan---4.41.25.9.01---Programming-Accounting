@@ -1,0 +1,146 @@
+body {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    background-color: #f4f7f6;
+    color: #333333;
+    margin: 0;
+    padding: 0 0 40px 0;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 950px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+header {
+    background-color: #1e3d59;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    font-size: 2.2em;
+    margin: 0 0 10px 0;
+    letter-spacing: 1px;
+}
+
+header h2 {
+    font-size: 1.3em;
+    margin: 0 0 5px 0;
+    font-weight: 400;
+    color: #f5f5f5;
+}
+
+header p {
+    font-size: 0.95em;
+    margin: 0;
+    color: #d1d8e0;
+    font-style: italic;
+}
+
+footer {
+    background-color: #1e3d59;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+section h2 {
+    color: #1e3d59;
+    border-bottom: 2px solid #1e3d59;
+    padding-bottom: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+section h3, section h4 {
+    color: #2b580c;
+    margin-bottom: 10px;
+}
+
+#balance-sheet {
+    width: 90%;
+    margin: 25px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-size: 0.95em;
+}
+
+#balance-sheet th, 
+#balance-sheet td {
+    border: 1px solid #cccccc;
+    padding: 10px 14px;
+    text-align: left;
+}
+
+#balance-sheet thead tr {
+    background-color: #17b978;
+    color: #ffffff;
+    font-size: 1.05em;
+}
+
+#balance-sheet th {
+    font-weight: 600;
+}
+
+#balance-sheet tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#balance-sheet .section-header {
+    background-color: #e8ecef !important;
+    color: #1e3d59;
+}
+
+#balance-sheet .sub-header {
+    background-color: #f8f9fa !important;
+    color: #555555;
+}
+
+#balance-sheet .subtotal-row {
+    background-color: #e2f3e8 !important;
+    font-weight: bold;
+}
+
+#balance-sheet .amount {
+    text-align: right;
+}
+
+#balance-sheet tfoot tr {
+    background-color: #d4edda;
+    color: #155724;
+    font-size: 1.05em;
+    font-weight: bold;
+}
+
+#balance-sheet tfoot td {
+    border-top: 2px solid #28a745;
+    border-bottom: 2px double #28a745;
+}
+
+#changes-in-equity ol {
+    margin-left: 20px;
+    padding-left: 20px;
+    list-style-type: upper-roman;
+}
+
+#changes-in-equity li {
+    font-size: 1em;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    color: #444444;
+}
