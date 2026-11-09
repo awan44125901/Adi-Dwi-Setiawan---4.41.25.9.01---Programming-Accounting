@@ -1,0 +1,135 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    background-color: #f4f7f6;
+    color: #333333;
+    margin: 0;
+    padding: 40px 20px;
+    line-height: 1.6;
+}
+
+.form-box {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-box h2 {
+    color: #1e3d59;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.8em;
+}
+
+.form-box h3 {
+    color: #2b580c;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #e0e0e0;
+    margin: 20px 0;
+}
+
+fieldset {
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+}
+
+legend {
+    font-weight: bold;
+    color: #1e3d59;
+    padding: 0 8px;
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #444444;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+    background-color: #ffffff;
+}
+
+input:focus, select:focus {
+    border-color: #1e3d59;
+    outline: none;
+}
+
+.btn-area {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.btn-primary { background-color: #1e3d59; }
+.btn-primary:hover { background-color: #14283c; }
+
+.btn-success { background-color: #17b978; }
+.btn-success:hover { background-color: #118a5a; }
+
+.btn-danger { background-color: #dc3545; padding: 5px 10px; font-size: 12px; }
+
+#transactionTable {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-size: 0.95em;
+}
+
+#transactionTable th, 
+#transactionTable td {
+    border: 1px solid #cccccc;
+    padding: 10px 12px;
+    text-align: left;
+}
+
+#transactionTable thead tr {
+    background-color: #17b978;
+    color: #ffffff;
+}
+
+#transactionTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}

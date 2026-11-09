@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive General Journal Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-box">
+        <h2>Awan's Tax Consultant</h2>
+        <h3>Interactive General Journal Form</h3>
+        <hr>
+
+        <!-- Form Input Transaksi Jurnal -->
+        <form id="journalForm">
+            <fieldset>
+                <legend>Detail Transaksi Jurnal</legend>
+
+                <div class="field">
+                    <label for="transDate">Tanggal Transaksi:</label>
+                    <input type="date" id="transDate" name="transDate" required>
+                </div>
+
+                <div class="field">
+                    <label for="refNo">Nomor Referensi (Ref. No.):</label>
+                    <input type="text" id="refNo" name="refNo" placeholder="Contoh: JU-001" required>
+                </div>
+
+                <div class="field">
+                    <label for="description">Deskripsi Transaksi:</label>
+                    <input type="text" id="description" name="description" placeholder="Contoh: Setoran Modal Awal" required>
+                </div>
+
+                <div class="field">
+                    <label for="accountSelect">Pilihan Akun:</label>
+                    <select id="accountSelect" name="accountSelect" required>
+                        <option value="">-- Pilih Akun --</option>
+                        <option value="Cash">Cash</option>
+                        <option value="Bank">Bank</option>
+                        <option value="Accounts Receivable">Accounts Receivable</option>
+                        <option value="Service Revenue">Service Revenue</option>
+                        <option value="Salaries Expense">Salaries Expense</option>
+                        <option value="Accounts Payable">Accounts Payable</option>
+                        <option value="Share Capital">Share Capital</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="debitAmount">Jumlah Debit (Rp):</label>
+                    <input type="number" id="debitAmount" name="debitAmount" min="0" placeholder="0">
+                </div>
+
+                <div class="field">
+                    <label for="creditAmount">Jumlah Kredit (Rp):</label>
+                    <input type="number" id="creditAmount" name="creditAmount" min="0" placeholder="0">
+                </div>
+            </fieldset>
+
+            <div class="btn-area">
+                <button type="button" id="addRowBtn" class="btn btn-primary">Add Transaction Row</button>
+                <button type="button" id="saveJournalBtn" class="btn btn-success">Save Journal (Dummy)</button>
+            </div>
+        </form>
+
+        <hr>
+
+        <!-- Tabel Output Transaksi Jurnal -->
+        <h3>Daftar Jurnal (Transaction List)</h3>
+        <table id="transactionTable">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Ref. No.</th>
+                    <th>Description</th>
+                    <th>Account</th>
+                    <th>Debit</th>
+                    <th>Credit</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="transactionBody">
+                <!-- Baris transaksi dimasukkan secara dinamis via JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
